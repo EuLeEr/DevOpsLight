@@ -20,3 +20,21 @@
    ```
 
    
+
+4. Запуск под kubernetes:
+
+   ```bash
+   minikube start
+   # долгая установка и запуск
+   kubectl cluster-info - # проверка запуска - информация о кластере
+   # выложить исходный образ из yml на dockerhub.com (локально не работает)
+   #как пример для данных ссылка из k8s.yml docker push euleer/devops:1.0
+   kubectl apply -f k8s.yml
+   # информация
+   kubectl get pods # отсюда берется ip  
+   kubectl get svc # отсюда берется port из ip loadbalancer
+   http://ip:port
+   
+   ```
+
+   
